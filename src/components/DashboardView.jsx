@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import bgImage from "../assets/DashboardViewBG.jpg"
 import bgImage2 from "../assets/DashboardViewBG2.jpg"
+import bgImage3 from "../assets/DashboardViewBG3.jpg"
 import cats from '../data'
 import Chart from 'chart.js/auto';
 import { Line } from "react-chartjs-2";
@@ -42,8 +43,19 @@ const CatWeightChart = ({ cat }) => {
       indexAxis: 'y',
       scales: {
         x: {
-          beginAtZero: true
+          beginAtZero: true,
+          grid: {
+            drawOnChartArea: false,
+            display:false,
+          }
+        },
+        y: {
+          grid: {
+            drawOnChartArea: false,
+            display:false,
+          }
         }
+
       },
       elements: {
         line: {
@@ -68,11 +80,11 @@ const DashboardView = ({ catId }) => {
   const [birthday, setBirthDay] = useState('')
 
   useEffect(() => {
-    console.log("catId, selectedCat = ",catId, selectedCat)
+    console.log("catId, selectedCat = ", catId, selectedCat)
     setSelectedCat(cats[catId])
   })
 
-  
+
 
   const monthArr = [
     { monthNo: 1, monthName: "Jan", },
@@ -108,7 +120,7 @@ const DashboardView = ({ catId }) => {
         <div className='image-container flex w-full min-h-screen bg-no-repeat 
           bg-cover items-center justify-center'
           style={{
-            backgroundImage: `linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(${bgImage2})`,
+            backgroundImage: `linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.7)), url(${bgImage3})`,
             width: "100%", height: "100%", objectFit: "cover"
           }}>
 
@@ -162,7 +174,7 @@ const DashboardView = ({ catId }) => {
           <div className='internal-right w-2/5'>
 
             <div className='activity'>
-              <Activity selectedCat={selectedCat}/>
+              <Activity selectedCat={selectedCat} />
             </div>
 
             <div className='all-activity-container'></div>
