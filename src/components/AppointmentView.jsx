@@ -1,8 +1,12 @@
 import React from 'react'
+import WorkOnProgress from './WorkOnProgress'
 
 const AppointmentView = () => {
   return (
-    <div>AppointmentView</div>
+    
+      
+      <WorkOnProgress text="We are still working on it..." page="Appointment View" />
+    
   )
 }
 

@@ -1,9 +1,10 @@
 import React from 'react'
+import WorkOnProgress from './WorkOnProgress'
 
 const ForgotPass = () => {
   return (
-    <div className='container'>
-        Forgot Password Page.
+    <div className='w-full h-full'>
+      <WorkOnProgress text="We are still working on it..." page="Forgot Password Page" />
     </div>
   )
 }

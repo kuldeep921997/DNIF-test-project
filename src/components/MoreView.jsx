@@ -1,8 +1,9 @@
 import React from 'react'
+import WorkOnProgress from './WorkOnProgress'
 
 const MoreView = () => {
   return (
-    <div>MoreView</div>
+    <WorkOnProgress text="We are still working on it..." page="More View"/>
   )
 }
 

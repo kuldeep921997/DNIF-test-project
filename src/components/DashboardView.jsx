@@ -15,7 +15,7 @@ const CatWeightChart = ({ cat }) => {
       {
         label: "Weight",
         fill: false,
-        lineTension: 0.1,
+        lineTension: 0.3,
         backgroundColor: "rgba(75,192,192,0.4)",
         borderColor: "rgba(75,192,192,1)",
         borderCapStyle: "butt",
@@ -45,13 +45,11 @@ const CatWeightChart = ({ cat }) => {
         x: {
           beginAtZero: true,
           grid: {
-            drawOnChartArea: false,
             display:false,
           }
         },
         y: {
           grid: {
-            drawOnChartArea: false,
             display:false,
           }
         }
@@ -120,7 +118,7 @@ const DashboardView = ({ catId }) => {
         <div className='image-container flex w-full min-h-screen bg-no-repeat 
           bg-cover items-center justify-center'
           style={{
-            backgroundImage: `linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.7)), url(${bgImage3})`,
+            backgroundImage: `linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url(${bgImage3})`,
             width: "100%", height: "100%", objectFit: "cover"
           }}>
 
@@ -145,8 +143,8 @@ const DashboardView = ({ catId }) => {
                     <div className='header-value text-2xl tracking-wider text-gray-500 capitalize'>{selectedCat?.breed}</div>
                   </div>
 
-                  <div className='color w-1/2 flex flex-col justify-start items-center min-h-[6rem]' style={{ borderBottom: "1px solid rgba(0,0,0,0.2)" }}>
-                    <div className='flex flex-col justify-center items-start'>
+                  <div className='color w-1/2 flex flex-col justify-center min-h-[6rem]' style={{ borderBottom: "1px solid rgba(0,0,0,0.2)" }}>
+                    <div className='flex flex-col justify-center items-start ml-[6rem]' >
                       <div className='header font-normal text-base text-gray-400'>Color</div>
                       <div className='header-value text-2xl tracking-wider text-gray-500 capitalize'>{selectedCat?.color}</div>
                     </div>
@@ -159,8 +157,8 @@ const DashboardView = ({ catId }) => {
                     <div className='header-value text-2xl tracking-wider text-gray-500 '>{birthday}</div>
                   </div>
 
-                  <div className='gender w-1/2 flex flex-col justify-center items-center  min-h-[6rem]' >
-                    <div className='flex flex-col justify-center items-start'>
+                  <div className='gender w-1/2 flex flex-col justify-center min-h-[6rem]' >
+                    <div className='flex flex-col justify-center items-start ml-[6rem]'>
                       <div className='header font-normal text-base text-gray-400'>Gender</div>
                       <div className='header-value text-2xl tracking-wider text-gray-500 capitalize'>{selectedCat?.gender}</div>
                     </div>

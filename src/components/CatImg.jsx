@@ -17,13 +17,13 @@ const CatImg = ({fn}) => {
 
         {
             id: 2,
-            name: "meow meow",
+            name: "shadow",
             img: Cat5,
         },
 
         {
             id: 3,
-            name: "billi",
+            name: "charlie",
             img: Cat3,
         },
     ]
@@ -44,7 +44,7 @@ const CatImg = ({fn}) => {
                 </div>
 
                 <div className='name-container'>
-                    <select className='bg-none border-0' style={{background: "none", border:"none" , outline:"none"}} onChange={(e) => catImgSelector(e.target.value)}>
+                    <select className='bg-none border-0 tracking-widest' style={{background: "none", border:"none" , outline:"none"}} onChange={(e) => catImgSelector(e.target.value)}>
                         {cats.map((cat, index) => (
                             <option style={{background:"transparent", border:"none" }} value={index+1} key={index}>{cat.name.toUpperCase()}</option>
                         ))}

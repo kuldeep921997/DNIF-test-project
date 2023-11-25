@@ -1,8 +1,9 @@
 import React from 'react'
+import WorkOnProgress from './WorkOnProgress'
 
 const CommunityView = () => {
   return (
-    <div>CommunityView</div>
+    <WorkOnProgress text="We are still working on it..." page="Community View" />
   )
 }
 
