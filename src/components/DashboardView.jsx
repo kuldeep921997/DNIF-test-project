@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import bgImage from "../assets/DashboardViewBG.jpg"
+import bgImage2 from "../assets/DashboardViewBG2.jpg"
 import cats from '../data'
 import Chart from 'chart.js/auto';
 import { Line } from "react-chartjs-2";
@@ -107,7 +108,7 @@ const DashboardView = ({ catId }) => {
         <div className='image-container flex w-full min-h-screen bg-no-repeat 
           bg-cover items-center justify-center'
           style={{
-            // backgroundImage: `linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(${bgImage})`,
+            backgroundImage: `linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url(${bgImage2})`,
             width: "100%", height: "100%", objectFit: "cover"
           }}>
 

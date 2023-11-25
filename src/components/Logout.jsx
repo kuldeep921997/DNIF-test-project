@@ -19,7 +19,7 @@ const Logout = () => {
 
     return (
         <>
-            <button onClick={() => Userlogout()} className='flex w-full bg-red-400 rounded-none'>
+            <button onClick={() => Userlogout()} className='flex w-full bg-red-300 rounded-none outline-none border-0 focus:outline-none'>
                 <div className='w-10'>
                     <img style={{ width: "100%" }} src={LogoutIcon} alt="icon" className='pr-4' />
                 </div>
